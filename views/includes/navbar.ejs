@@ -1,0 +1,57 @@
+<style>
+    .btn-search {
+      background-color:rgb(235, 47, 47) ;
+      color: #ffff;
+      border-radius: 25px;
+      padding: 0 1rem 0 1rem;
+    }
+    .btn-search:hover{
+      background-color:rgb(235, 47, 47) ;
+      color: #ffff;
+    }
+    .btn-search i {
+      display: inline;
+      margin-right: 0.5rem;
+     
+    }
+    .search-inp {
+      border-radius: 25px;
+      padding:0.5rem 3rem 0.5rem 3rem;
+      font-size: 0.8rem;
+    }
+</style>
+
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/"><i class="fa-regular fa-compass"></i></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <h2 style="font-family: 'Arial', sans-serif; font-size: 2rem; font-weight: bold; color: #007bff; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); margin-bottom: 0; line-height: 1.2; text-align: center;"><i>WonderLust</i></h2>
+        &nbsp; &nbsp; &nbsp; &nbsp;
+        <a class="nav-link" href="/listings"><h3><i><b>Explore</b></i></h3></a>
+      </div>
+    </div>
+    <div class="navbar-nav ms-auto">
+      <form class="d-flex" action="/search" method="GET">
+        <input class="form-control me-2 search-inp" type="search" placeholder="Search destination" aria-label="Search" name="query">
+        <button class="btn btn-search" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+    </form>
+    
+    </div>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ms-auto">
+        <a class="nav-link" href="/listings/new">New List</a>
+        <% if(!currUser) { %>
+          <a class="nav-link" href="/signup"><b>SignUp</b></a>
+          <a class="nav-link" href="/login"><b>Login</b></a>
+        <% } else { %>
+          <span class="navbar-text" style="color: #007bff;"><i class="fa-duotone fa-solid fa-user"></i> <b><i>@<%= currUser.username %></i></b></span>
+          <a class="nav-link" href="/logout"><b>Logout</b></a>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</nav>

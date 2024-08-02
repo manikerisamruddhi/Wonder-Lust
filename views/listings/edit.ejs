@@ -1,0 +1,36 @@
+<% layout('/layout/boilerplate') -%>
+<body>
+    <h2>Edit Listing</h2>
+    <form action="/listings/<%= listing._id %>?_method=PUT" method="post" enctype="multipart/form-data">        <p>Hotel ID is ::<%= listing._id %></p>
+        <div class="row">
+            <div class="col-8 offset-2">
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <input type="text" name="listings[title]" class="form-control" value="<%= listing.title %>" required>
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description</label>
+                    <textarea class="form-control" name="listings[description]" required><%= listing.description %></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="image" class="form-label">Preview Image </label>
+                    <br>
+                   <img style="border-radius: 10px;" src="<%= imageUrl %>" alt="">
+                </div>
+                <div class="mb-3">
+                    <label for="image" class="form-label">Upload New Image (optional)</label>
+                    <input type="file" name="listings[image]" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="location" class="form-label">Location</label>
+                    <input type="text" name="listings[location]" class="form-control" value="<%= listing.location %>" required>
+                </div>
+                <div class="mb-3">
+                    <label for="price" class="form-label">Price</label>
+                    <input type="number" name="listings[price]" class="form-control" value="<%= listing.price %>" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Save Changes</button>
+            </div>
+        </div>
+    </form>
+</body>
