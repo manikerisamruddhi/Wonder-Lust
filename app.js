@@ -7,6 +7,8 @@ const app = express();
 const path = require("path");
 const mongoose = require("mongoose");
 //const url = 'mongodb://127.0.0.1:27017/wonderlust';
+
+
 const url = "mongodb+srv://manikerisamruddhi:wamiUpM0G6d7GDys@cluster0.khucy7c.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 
 const Listing = require("./models/listing.js");
