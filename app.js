@@ -9,7 +9,7 @@ const mongoose = require("mongoose");
 //const url = 'mongodb://127.0.0.1:27017/wonderlust';
 
 
-const url = "mongodb+srv://manikerisamruddhi:wamiUpM0G6d7GDys@cluster0.khucy7c.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+const url = "mongodb+srv://manikerisaurabh:7VY2R9jtyeoWC5vZ@cluster0.4xokiyh.mongodb.net/chat-app-db?retryWrites=true&w=majority&appName=Cluster0"
 
 const Listing = require("./models/listing.js");
 const methodOverride = require('method-override');
